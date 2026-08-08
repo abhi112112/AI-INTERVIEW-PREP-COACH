@@ -61,9 +61,9 @@ function App() {
             </Routes>
           </main>
 
-          {/* Clean Humanized Footer */}
+          {/* Footer */}
           <footer className="border-t border-slate-900 py-6 text-center text-xs text-slate-500">
-            <p>© 2026 PrepPulse. Interactive Practice & STAR Evaluation Framework.</p>
+            <p>© 2026 Interview Prep Coach. Interactive Practice & STAR Evaluation Framework.</p>
           </footer>
         </div>
       </Router>

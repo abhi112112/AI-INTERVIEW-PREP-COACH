@@ -26,10 +26,10 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-lg text-white tracking-tight leading-none group-hover:text-teal-400 transition-colors">
-                PrepPulse
+                Interview Prep Coach
               </span>
               <span className="text-[10px] text-slate-400 font-mono tracking-wider uppercase mt-0.5">
-                Practice & STAR Rubric
+                Practice Studio & STAR Rubric
               </span>
             </div>
           </Link>
