@@ -6,7 +6,7 @@ The app generates realistic behavioral and technical interview questions, evalua
 
 ---
 
-## ✨ Features
+##  Features
 
 - **Tailored Question Generator**: Generate 5 role-specific interview questions based on category (*Behavioral*, *Technical/DSA*, *Project Walkthrough*) or by pasting a target **Job Description (JD)**.
 -  **STAR Method AI Evaluation**: Receives instant structured AI feedback scoring responses from 1 to 10 with strengths, weaknesses, key suggestions, and a breakdown of Situation, Task, Action, and Result.
