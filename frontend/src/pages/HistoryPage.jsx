@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Sparkles, Filter, Calendar, Award, ChevronDown, ChevronUp, Star, Lightbulb, CheckCircle2, AlertTriangle, TrendingUp, Search } from 'lucide-react';
-// Recharts components for rendering interactive performance trend line charts
+import { Filter, Calendar, Award, ChevronDown, ChevronUp, Star, Lightbulb, CheckCircle2, AlertTriangle, TrendingUp, Search } from 'lucide-react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import API from '../services/api';
 
@@ -45,7 +44,6 @@ const HistoryPage = () => {
 
   const categories = ['All', 'Behavioral', 'Technical/DSA', 'Project Walkthrough', 'Custom Job Description'];
 
-  // Prepare chronological trend data for Recharts line chart
   const trendData = analytics?.timelineTrend || [];
 
   return (
@@ -57,7 +55,7 @@ const HistoryPage = () => {
             <span>Interview Practice History</span>
           </h1>
           <p className="text-slate-400 text-sm mt-1">
-            Review past practice sessions, filter by interview category, and track your score progression over time.
+            Review past practice sessions, filter by interview focus, and track your score progression over time.
           </p>
         </div>
       </div>
@@ -67,10 +65,10 @@ const HistoryPage = () => {
         <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 text-white font-bold text-lg">
-              <TrendingUp className="w-5 h-5 text-indigo-400" />
+              <TrendingUp className="w-5 h-5 text-teal-400" />
               <span>Score Progression Trend Over Time</span>
             </div>
-            <span className="text-xs font-mono text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">
+            <span className="text-xs font-mono text-teal-300 bg-teal-500/10 px-3 py-1 rounded-full border border-teal-500/20">
               Average: {analytics?.overallAverageScore || '0.0'} / 10
             </span>
           </div>
@@ -92,9 +90,9 @@ const HistoryPage = () => {
                 <Line
                   type="monotone"
                   dataKey="score"
-                  stroke="#6366f1"
+                  stroke="#14b8a6"
                   strokeWidth={3}
-                  dot={{ fill: '#818cf8', r: 5 }}
+                  dot={{ fill: '#2dd4bf', r: 5 }}
                   activeDot={{ r: 8 }}
                 />
               </LineChart>
@@ -115,7 +113,7 @@ const HistoryPage = () => {
             onClick={() => setCategoryFilter(cat)}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all shrink-0 ${
               categoryFilter === cat
-                ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/25'
+                ? 'bg-teal-600 text-white shadow-md shadow-teal-900/25'
                 : 'glass-card text-slate-400 hover:text-white border border-slate-800'
             }`}
           >
@@ -150,7 +148,7 @@ const HistoryPage = () => {
                   className="p-6 cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-slate-800/40 transition-colors"
                 >
                   <div className="flex items-center space-x-4">
-                    <div className="px-3.5 py-1.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold">
+                    <div className="px-3.5 py-1.5 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-bold">
                       {session.category}
                     </div>
                     <div>
@@ -192,7 +190,7 @@ const HistoryPage = () => {
                       {session.questions?.map((q, qIdx) => (
                         <div key={q._id || qIdx} className="glass-card p-6 rounded-2xl border border-slate-800 space-y-4">
                           <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-                            <span className="text-xs font-bold text-indigo-400">
+                            <span className="text-xs font-bold text-teal-400">
                               Question #{qIdx + 1} ({q.difficulty || 'Medium'})
                             </span>
                             {q.evaluation?.score && (
@@ -213,7 +211,7 @@ const HistoryPage = () => {
                             </p>
                           </div>
 
-                          {/* AI Evaluation */}
+                          {/* Evaluation */}
                           {q.evaluation && (
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
                               <div className="space-y-1">
@@ -241,7 +239,7 @@ const HistoryPage = () => {
                               </div>
 
                               <div className="space-y-1">
-                                <span className="text-xs font-semibold text-indigo-400 flex items-center space-x-1">
+                                <span className="text-xs font-semibold text-teal-400 flex items-center space-x-1">
                                   <Lightbulb className="w-3.5 h-3.5" />
                                   <span>Suggestion</span>
                                 </span>

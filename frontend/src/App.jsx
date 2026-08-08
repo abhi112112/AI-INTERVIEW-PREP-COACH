@@ -1,5 +1,4 @@
 import React from 'react';
-// React Router DOM components for SPA routing
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
@@ -26,7 +25,7 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
 
-              {/* Protected Routes (require JWT authentication) */}
+              {/* Protected Routes */}
               <Route
                 path="/dashboard"
                 element={
@@ -62,9 +61,9 @@ function App() {
             </Routes>
           </main>
 
-          {/* Clean Footer */}
+          {/* Clean Humanized Footer */}
           <footer className="border-t border-slate-900 py-6 text-center text-xs text-slate-500">
-            <p>© 2026 AI Interview Prep Coach. Powered by Anthropic Claude API & STAR Evaluation Framework.</p>
+            <p>© 2026 PrepPulse. Interactive Practice & STAR Evaluation Framework.</p>
           </footer>
         </div>
       </Router>

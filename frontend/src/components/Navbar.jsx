@@ -1,8 +1,6 @@
 import React from 'react';
-// React Router Link and useNavigate for SPA navigation
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-// Lucide icons for UI icons
-import { Sparkles, LayoutDashboard, History, PlusCircle, LogOut, User } from 'lucide-react';
+import { Target, LayoutDashboard, History, PlusCircle, LogOut, User } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
@@ -18,20 +16,20 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="sticky top-0 z-50 glass-panel border-b border-slate-800">
+    <nav className="sticky top-0 z-50 glass-panel border-b border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-200">
-              <Sparkles className="w-5 h-5 text-white" />
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-teal-500 via-emerald-500 to-indigo-500 flex items-center justify-center shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform duration-200">
+              <Target className="w-5 h-5 text-white" />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg text-white tracking-tight leading-none group-hover:text-indigo-400 transition-colors">
-                InterviewPrep<span className="text-indigo-500">.AI</span>
+              <span className="font-bold text-lg text-white tracking-tight leading-none group-hover:text-teal-400 transition-colors">
+                PrepPulse
               </span>
-              <span className="text-[10px] text-slate-400 font-mono tracking-widest uppercase mt-0.5">
-                AI Coach & STAR Rubric
+              <span className="text-[10px] text-slate-400 font-mono tracking-wider uppercase mt-0.5">
+                Practice & STAR Rubric
               </span>
             </div>
           </Link>
@@ -43,7 +41,7 @@ const Navbar = () => {
                 to="/dashboard"
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   isActive('/dashboard')
-                    ? 'bg-indigo-600/20 text-indigo-400 border border-indigo-500/30'
+                    ? 'bg-teal-500/15 text-teal-300 border border-teal-500/30'
                     : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
                 }`}
               >
@@ -55,19 +53,19 @@ const Navbar = () => {
                 to="/interview/setup"
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   isActive('/interview/setup')
-                    ? 'bg-indigo-600/20 text-indigo-400 border border-indigo-500/30'
+                    ? 'bg-teal-500/15 text-teal-300 border border-teal-500/30'
                     : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
                 }`}
               >
-                <PlusCircle className="w-4 h-4 text-indigo-400" />
-                <span className="hidden sm:inline">New Session</span>
+                <PlusCircle className="w-4 h-4 text-teal-400" />
+                <span className="hidden sm:inline">New Practice</span>
               </Link>
 
               <Link
                 to="/history"
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   isActive('/history')
-                    ? 'bg-indigo-600/20 text-indigo-400 border border-indigo-500/30'
+                    ? 'bg-teal-500/15 text-teal-300 border border-teal-500/30'
                     : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
                 }`}
               >
@@ -78,7 +76,7 @@ const Navbar = () => {
               {/* User Profile & Logout */}
               <div className="flex items-center ml-4 pl-4 border-l border-slate-800 space-x-3">
                 <div className="flex items-center space-x-2 bg-slate-900/80 px-3 py-1.5 rounded-full border border-slate-800">
-                  <User className="w-4 h-4 text-indigo-400" />
+                  <User className="w-4 h-4 text-teal-400" />
                   <span className="text-xs font-medium text-slate-200 max-w-[100px] truncate">{user.name}</span>
                 </div>
                 <button
@@ -100,7 +98,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/register"
-                className="px-4 py-2 text-sm font-medium bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg shadow-lg shadow-indigo-600/20 transition-all hover:scale-105"
+                className="px-4 py-2 text-sm font-medium bg-teal-600 hover:bg-teal-500 text-white rounded-lg shadow-md shadow-teal-600/20 transition-all hover:scale-105"
               >
                 Get Started
               </Link>
