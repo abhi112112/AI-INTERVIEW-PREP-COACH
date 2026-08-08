@@ -1,4 +1,4 @@
-# 🎯 AI Interview Prep Coach
+# AI Interview Prep Coach
 
 A full-stack web application built with **React (Vite)**, **Express REST API**, **MongoDB**, **JWT Authentication**, and **Anthropic Claude 3.5 Sonnet API**. 
 
@@ -8,15 +8,15 @@ The app generates realistic behavioral and technical interview questions, evalua
 
 ## ✨ Features
 
-- 🧠 **Tailored Question Generator**: Generate 5 role-specific interview questions based on category (*Behavioral*, *Technical/DSA*, *Project Walkthrough*) or by pasting a target **Job Description (JD)**.
-- ⭐ **STAR Method AI Evaluation**: Receives instant structured AI feedback scoring responses from 1 to 10 with strengths, weaknesses, key suggestions, and a breakdown of Situation, Task, Action, and Result.
-- 📈 **History & Score Progression**: View past practice sessions, filter by interview category, and track average score growth over time with interactive **Recharts** line graphs.
-- 🔒 **JWT Authentication**: Secure user registration and login with `bcryptjs` password hashing and stateless token protection on API endpoints.
-- 🛡️ **Resilient Offline Fallback**: Features an in-memory database (`MongoMemoryServer`) and intelligent fallback question/evaluation generator when MongoDB or Claude API keys are unconfigured.
+- **Tailored Question Generator**: Generate 5 role-specific interview questions based on category (*Behavioral*, *Technical/DSA*, *Project Walkthrough*) or by pasting a target **Job Description (JD)**.
+-  **STAR Method AI Evaluation**: Receives instant structured AI feedback scoring responses from 1 to 10 with strengths, weaknesses, key suggestions, and a breakdown of Situation, Task, Action, and Result.
+-  **History & Score Progression**: View past practice sessions, filter by interview category, and track average score growth over time with interactive **Recharts** line graphs.
+-  **JWT Authentication**: Secure user registration and login with `bcryptjs` password hashing and stateless token protection on API endpoints.
+-  **Resilient Offline Fallback**: Features an in-memory database (`MongoMemoryServer`) and intelligent fallback question/evaluation generator when MongoDB or Claude API keys are unconfigured.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technologies |
 | :--- | :--- |
@@ -28,7 +28,7 @@ The app generates realistic behavioral and technical interview questions, evalua
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 AI-INTERVIEW-PREP-COACH/
@@ -73,7 +73,7 @@ AI-INTERVIEW-PREP-COACH/
 
 ---
 
-## 🚀 Quick Start Guide
+##  Quick Start Guide
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (v18 or higher recommended)
@@ -120,7 +120,7 @@ npm run dev
 
 ---
 
-## 🔌 API Reference
+##  API Reference
 
 ### Authentication (`/api/auth`)
 - `POST /api/auth/register` - Create a new user account (`name`, `email`, `password`)
@@ -135,12 +135,12 @@ npm run dev
 
 ---
 
-## 📝 Architectural Decisions
+##  Architectural Decisions
 
 For a full deep dive into technical decisions (JWT vs session auth, LLM JSON prompt engineering, and bug resolutions), read [DECISIONS.md](DECISIONS.md).
 
 ---
 
-## 📄 License
+##  License
 
 This project is open source and available under the [ISC License](LICENSE).
